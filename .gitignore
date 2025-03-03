@@ -1,0 +1,8 @@
+local_db/*
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.ipynb
+*.log
+user.json
