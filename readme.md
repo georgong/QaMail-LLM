@@ -32,6 +32,11 @@ Before you begin, ensure you have met the following requirements:
 
 To run this project, you need to install the following dependencies. We recommend using either `pip` (Python's default package manager) or `Anaconda` (a popular Python distribution).
 
+- **Hardware Requirements**:
+
+if you use local LLM, usually at least **3GB of free VRAM** are necessary to generates a fluent and accurate response.
+if you use external LLM, it doesn't matter.
+
 - **Accounts**: ollama or other LLM with api_keys, your email_account with POP3 server support
    - [Downloading Ollama](https://ollama.com/download)
    - [Gmail POP3 instruction](https://support.google.com/mail/answer/7104828)
@@ -57,6 +62,17 @@ To install and set up the project, follow these steps:
 
 ## ⚡ Quick Start
 
+### 📥 Pull the Model from Ollama (Optional)
+If you are using **Ollama** as your LLM provider, you need to pull the model before running it.
+
+```sh
+ollama pull qwen2.5:3b
+```
+- You can replace `qwen2.5:3b` with **any other model** of your choice.
+- **Larger models** 🏋️‍♂️ perform better on complex tasks.
+- **Smaller models** 🏃‍♂️ require less RAM and run more efficiently.
+
+
 ### 🛠️ Create `user.json` in the folder
 
 Create a `user.json` file and fill in your email configuration:
@@ -75,7 +91,8 @@ Create a `user.json` file and fill in your email configuration:
   "model": "qwen2.5:3b",
   "enable_summary": false,
   "n_results": 10,
-  "port": 5001
+  "port": 5001,
+  "api_key":"put your api key here"
 }
 ```
 
